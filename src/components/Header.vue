@@ -5,14 +5,15 @@
     </div>
     <div class="col-8 my-4">
       <div class="input-group">
-        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+        <input type="text" class="form-control" placeholder="Search text in joke" aria-describedby="button-search">
         <div class="input-group-append">
-          <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="fas fa-search"></i></button>
+          <button class="btn btn-outline-secondary" type="button" id="button-search"><i class="fas fa-search"></i>
+          </button>
         </div>
       </div>
     </div>
     <div class="col-2 my-4">
-      <i v-if="mode == 'dark'" class="fas sun fa-3x"></i>
+      <i v-if="darkMode" class="fas fa-sun fa-3x"></i>
       <i v-else class="fas fa-moon fa-3x"></i>
     </div>
   </div>
@@ -21,9 +22,9 @@
 <script>
   export default {
     name: "Header",
+    props: ['darkMode'],
     data() {
       return {
-        prop: ['mode'],
         SearchText: null,
       }
     },
