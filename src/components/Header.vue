@@ -23,10 +23,8 @@
   export default {
     name: "Header",
     props: ['darkMode'],
-    data() {
-      return {
-        SearchText: null,
-      }
+    data: {
+      SearchText: null,
     },
   }
 </script>
