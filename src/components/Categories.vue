@@ -2,8 +2,8 @@
   <div>
     <h2 class="text-center">Categories:</h2>
     <ul>
-      <li>
-
+      <li v-for="category in categories" :key="category">
+        {{ category }}
       </li>
     </ul>
   </div>
@@ -18,7 +18,7 @@
     data() {
       return {
         error: null,
-        Categories: null,
+        categories: null,
       }
     },
     mounted() {
@@ -29,12 +29,12 @@
 
 
         if (localStorage.getItem('categories')){
-          this.Categories = localStorage.categories;
+          this.categories = JSON.parse(localStorage.categories);
         } else {
           axios.get(process.env.VUE_APP_API + '/categories')
             .then(response => {
               this.error = response;
-              this.Categories = response.data;
+              this.categories = response.data;
               localStorage.setItem('categories', JSON.stringify(response.data));
             }).catch(error => {
             this.error = error;
