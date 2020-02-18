@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <Header darkMode="true"/>
+    <Navbar darkMode="true"/>
     <div class="row">
       <div class="col-4">
         <Categories dark-mode=""/>
@@ -14,7 +14,7 @@
 
 <script>
 // @ is an alias to /src
-import Header from "../components/Header";
+import Navbar from "../components/Navbar";
 import Categories from "../components/Categories";
 import Joke from "../components/Joke";
 
@@ -23,7 +23,7 @@ export default {
   components: {
     Joke,
     Categories,
-    Header,
+    Navbar,
   }
 }
 </script>
