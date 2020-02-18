@@ -9,6 +9,7 @@
         <Joke joke-id="new"/>
       </div>
     </div>
+    <Footnote/>
   </div>
 </template>
 
@@ -17,10 +18,12 @@
 import Navbar from "../components/Navbar";
 import Categories from "../components/Categories";
 import Joke from "../components/Joke";
+import Footnote from "../components/Footnote";
 
 export default {
   name: 'home',
   components: {
+    Footnote,
     Joke,
     Categories,
     Navbar,
