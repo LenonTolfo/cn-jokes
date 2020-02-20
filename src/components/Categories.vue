@@ -1,11 +1,16 @@
 <template>
   <div>
     <h2 class="text-center">Categories:</h2>
-    <ul>
-      <li v-for="category in categories" :key="category">
-        {{ category }}
-      </li>
-    </ul>
+    <div class="col-12">
+      <button class="btn btn-primary btn-block my-1 text-capitalize" :class="{active: currentCategory === 'random'}" @click="selectCategory('random')">
+        random
+      </button>
+    </div>
+    <div class="col-12" v-for="category in categories" :key="category">
+      <button class="btn btn-primary btn-block my-1 text-capitalize" :class="currentCategory === category ? 'active':''" @click="selectCategory(category)">
+        {{category}}
+      </button>
+    </div>
   </div>
 </template>
 
@@ -14,7 +19,7 @@
 
   export default {
     name: "Categories",
-    props: ['darkMode'],
+    props: ['darkMode', 'currentCategory'],
     data() {
       return {
         error: null,
@@ -26,8 +31,6 @@
     },
     methods: {
       loadCategories () {
-
-
         if (localStorage.getItem('categories')){
           this.categories = JSON.parse(localStorage.categories);
         } else {
@@ -39,6 +42,11 @@
             }).catch(error => {
             this.error = error;
           });
+        }
+      },
+      selectCategory (newCategory) {
+        if (this.currentCategory !== newCategory){
+          this.$emit('update-category', newCategory)
         }
       }
     }

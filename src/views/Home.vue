@@ -3,7 +3,7 @@
     <Navbar darkMode="true"/>
     <div class="row">
       <div class="col-4">
-        <Categories dark-mode=""/>
+        <Categories dark-mode="" :current-category="category" @update-category="updateCategory"/>
       </div>
       <div class="col-8">
         <Joke joke-id="new"/>
@@ -27,6 +27,16 @@ export default {
     Joke,
     Categories,
     Navbar,
+  },
+  data () {
+    return{
+      category: 'random',
+    }
+  },
+  methods: {
+    updateCategory (newCategory) {
+      this.category = newCategory
+    }
   }
 }
 </script>
