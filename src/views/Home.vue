@@ -6,7 +6,7 @@
         <Categories dark-mode="" :current-category="category" @update-category="updateCategory"/>
       </div>
       <div class="col-8">
-        <Joke joke-id="new"/>
+        <Joke :category="category"/>
       </div>
     </div>
     <Footnote/>
@@ -36,7 +36,7 @@ export default {
   methods: {
     updateCategory (newCategory) {
       this.category = newCategory
-    }
+    },
   }
 }
 </script>
