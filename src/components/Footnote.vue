@@ -1,5 +1,5 @@
 <template>
-  <footer class="row">
+  <footer class="row col-12 m-0 py-2">
     <div class="col-4 text-center ">
       <h6 class="font-weight-bold">About</h6>
     </div>
@@ -34,7 +34,6 @@
     font-size: 10px;
   }
   footer {
-    position: fixed;
-    bottom: 0;
+    background-color: #bbcad6;
   }
 </style>

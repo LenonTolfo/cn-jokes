@@ -1,12 +1,14 @@
 <template>
-  <div class="container">
-    <Navbar darkMode="true"/>
-    <div class="row">
-      <div class="col-4">
-        <Categories dark-mode="" :current-category="category" @update-category="updateCategory"/>
-      </div>
-      <div class="col-8">
-        <Joke :category="category"/>
+  <div>
+    <div class="container">
+      <Navbar darkMode="true"/>
+      <div class="row">
+        <div class="col-4">
+          <Categories dark-mode="" :current-category="category" @update-category="updateCategory"/>
+        </div>
+        <div class="col-8">
+          <Joke :category="category"/>
+        </div>
       </div>
     </div>
     <Footnote/>
