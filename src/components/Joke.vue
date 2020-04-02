@@ -20,7 +20,7 @@
     </div>
     <div class="row">
       <div class="col-12">
-        <button class="btn btn-warning float-right">favorite</button>
+        <button class="btn btn-warning float-right" disabled data-toggle="tooltip" data-placement="top" title="coming soon!">favorite</button>
       </div>
     </div>
   </div>
