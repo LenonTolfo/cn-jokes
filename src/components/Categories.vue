@@ -19,12 +19,15 @@
 
   export default {
     name: "Categories",
-    props: ['darkMode', 'currentCategory'],
+    props: ['darkMode'],
     data() {
       return {
         error: null,
         categories: null,
       }
+    },
+    computed: {
+      currentCategory () {return this.$store.state.category}
     },
     mounted() {
       this.loadCategories()
@@ -45,9 +48,7 @@
         }
       },
       selectCategory (newCategory) {
-        if (this.currentCategory !== newCategory){
-          this.$emit('update-category', newCategory)
-        }
+        this.$store.commit('setCategory', newCategory)
       }
     }
   }

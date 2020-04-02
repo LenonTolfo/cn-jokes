@@ -8,7 +8,7 @@
         <h2 class="text-capitalize">{{category}}</h2>
       </div>
       <div class="col-2">
-        <button class="btn btn-success float-right">next</button>
+        <button class="btn btn-success float-right" @click="loadNewJoke">next</button>
       </div>
     </div>
     <div class="row my-4">
