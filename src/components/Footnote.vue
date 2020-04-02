@@ -1,7 +1,7 @@
 <template>
   <footer class="row col-12 m-0 py-2">
     <div class="col-4 text-center ">
-      <h6 class="font-weight-bold">About</h6>
+<!--      <h6 class="font-weight-bold">About</h6>-->
     </div>
     <div class="col-4 text-center disclaimer">
       <h6 class="font-weight-bold">Legal disclaimer:</h6>
@@ -14,11 +14,11 @@
       </p>
     </div>
     <div class="col-4">
-      <h6 class="font-weight-bold text-center">Creators:</h6>
-      <ul>
-        <li>Ana Carolina</li>
-        <li>Lenon Tolfo</li>
-      </ul>
+<!--      <h6 class="font-weight-bold text-center">Creators:</h6>-->
+<!--      <ul>-->
+<!--        <li>Ana Carolina</li>-->
+<!--        <li>Lenon Tolfo</li>-->
+<!--      </ul>-->
     </div>
   </footer>
 </template>

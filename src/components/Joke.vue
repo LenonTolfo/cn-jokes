@@ -2,7 +2,7 @@
   <div class="container-fluid joke mt-2">
     <div class="row my-3">
       <div class="col-2">
-        <button class="btn btn-success">prev</button>
+        <button class="btn btn-success" disabled data-toggle="tooltip" data-placement="top" title="coming soon!">prev</button>
       </div>
       <div class="col-8 text-center">
         <h2 class="text-capitalize">{{category}}</h2>
