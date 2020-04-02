@@ -1,7 +1,7 @@
 <template>
   <div class="row text-center">
     <div class="col-2 my-3">
-      <router-link to="/"><img alt="logo" class="logo" src="../assets/logo.png"></router-link>
+      <router-link to="/"><img alt="logo" class="logo" src="../assets/CN_Logo.png"></router-link>
     </div>
     <div class="col-8 my-4">
       <div class="input-group">
@@ -22,11 +22,13 @@
 <script>
   export default {
     name: "Navbar",
-    props: ['darkMode'],
     data() {
       return {
         SearchText: null,
       }
+    },
+    computed:{
+      darkMode() { return this.$store.state.darkMode },
     },
   }
 </script>

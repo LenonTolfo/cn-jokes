@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="container">
-      <Navbar darkMode="true"/>
+      <Navbar/>
       <div class="row">
         <div class="col-4">
           <Categories dark-mode="" :current-category="category"/>
