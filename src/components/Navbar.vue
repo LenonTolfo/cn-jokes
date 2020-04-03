@@ -14,7 +14,7 @@
     </div>
     <div class="col-2 my-4">
       <i v-if="darkMode" class="fas fa-sun fa-3x"></i>
-      <i v-else class="fas fa-moon fa-3x"></i>
+      <i v-else class="fas fa-moon fa-3x" hidden></i>
     </div>
   </div>
 </template>
